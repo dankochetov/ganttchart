@@ -1,0 +1,146 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	clear: both;
+}
+
+#mainTable {
+	display: table;
+	width: 76%;
+	float: left;
+}
+
+#mainTable .row, .table .row {
+	display: table-row;
+}
+
+#mainTable .row .col.category {
+	width: 15%;
+	white-space: nowrap;
+}
+
+#mainTable .row .col.category .name {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#mainTable .row .col.category .removeBtn {
+	font-size: x-large;
+	font-weight: bold;
+	color: red;
+	visibility: hidden;
+	padding: 5px;
+}
+
+#mainTable .row .col.category:hover .removeBtn {
+	visibility: visible;
+	cursor: pointer;
+}
+
+#mainTable .row .col:first-of-type {
+	border-left: 2px #ccf solid;
+}
+
+#mainTable .row .col, .table .row .col {
+	display: table-cell;
+	border-top: 2px #99f solid;
+	border-right: 2px #ccf solid;
+	padding: 10px;
+}
+
+#mainTable .row .col.interval {
+	padding: 0;
+}
+
+#mainTable .row .interval {
+	border-right: 1px #ddf solid;
+}
+
+#mainTable .row:last-of-type .col {
+	border-bottom: 2px #99f solid;
+}
+
+#mainTable .row:nth-child(even) .col {
+	background-color: rgb(245, 245, 255);
+}
+
+#mainTable .row .graphrow, #mainTable .row .spaceholder {
+	display: block;
+	position: relative;
+	height: 25px;
+	top: 5px;
+}
+
+#mainTable .row .spaceholder {
+	visibility: hidden;
+}
+
+#mainTable .row .graph, #mainTable .row .spaceholder div {
+	display: inline-block;
+	position: absolute;
+	margin-top: -5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: white;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#mainTable .row .date {
+	margin-top: 20px;
+	font-size: small;
+	display: inline;
+	padding: 0;
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#mainTable .row .col .hideBtn {
+	display: inline;
+	visibility: hidden;
+	margin-right: 5px;
+	outline: none;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hiddenCategoriesRow {
+	text-align: center;
+	float: right;
+	width: 20%;
+}
+
+.hiddenCategoriesRow > h4 {
+	margin: 0;
+}
+
+.categoryLabel {
+	margin: 5px;
+	display: block;
+	background-color: #bbb;
+	border: 2px gray solid;
+	height: 20px;
+	padding: 5px 8px 5px 8px;
+	color: black;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.categoryLabel:hover {
+	cursor: pointer;
+	background-color: #ddd;
+}
+
+.categoryLabel:active {
+	background-color: #777;
+}
